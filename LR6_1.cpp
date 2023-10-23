@@ -12,8 +12,11 @@ scanf ("%f", &b);
 if (x<=a) {
 z = fabs(x) + sin(x); // При x <= a выполняется данная формула
 printf ("Function value z = fabs(x) + sin(x): %e", z);
+} else if (a < x < b) {
+z = cos(pow(x,2)); // При a < x < b выполняется данная формула
+printf ("Function value z = cos(pow(x,2)): %e", z);
 } else {
-printf ("Error! 'a' should be <= 'x'");
+printf ("Error! 'a' should be <= 'x' or 'a' < 'x' < 'b'");
 }
 return 0;
 }
